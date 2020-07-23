@@ -1,18 +1,19 @@
 // Creating the variables
 const listInput = document.querySelector('input.todo-list');
 const button = document.querySelector('i.todo-list');
-const ul = document.querySelector('ul.todo-list');
+const list = document.querySelector('ul.todo-list');
+const allListItems = document.querySelectorAll('li.todo-list');
 
 // Executing the list elements on click
 button.addEventListener('click', () => {
-  
+
   const listItem = document.createElement('li');
+  listItem.setAttribute('class', 'todo-list');
 
   // Conditional to check if the input is empty
   if (listInput.value != "") {
-    listItem.innerHTML = listInput.value;
-    ul.appendChild(listItem);
-    listItem.innerHTML += '<i class="fa fa-trash-o delete-btn"></i>';
+    listItem.innerHTML = "<span class='strikethrough'>  " + listInput.value + "  </span>" + '<i class="fa fa-trash-o delete-btn"></i>';
+    list.appendChild(listItem);
     listInput.value = "";
   } else {
     alert("Please add some content first");
