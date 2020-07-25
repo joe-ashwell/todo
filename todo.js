@@ -1,6 +1,6 @@
 // Creating the variables
 const listInput = document.querySelector('input.todo-list');
-const button = document.querySelector('i.todo-list');
+const button = document.querySelector('button.todo-list');
 const list = document.querySelector('ul.todo-list');
 const allListItems = document.querySelectorAll('li.todo-list');
 
@@ -18,6 +18,11 @@ button.addEventListener('click', () => {
   } else {
     alert("Please add some content first");
   }
+
+  // To remove item on element click
+  listItem.addEventListener("click", () => {
+    list.removeChild(listItem);
+  })
   
 });
 
@@ -30,3 +35,4 @@ listInput.addEventListener("keyup", () => {
   }
 
 });
+
