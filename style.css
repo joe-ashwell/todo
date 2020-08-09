@@ -42,7 +42,7 @@ div.listPad {
   margin: auto;
 }
 
-input {
+input.todo-list {
   color: var(--myFontColour);
   outline: 0;
   border: 0;
