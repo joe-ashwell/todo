@@ -122,4 +122,14 @@ li:hover .strikethrough::after {
   animation-fill-mode: forwards; 
 }
 
-
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  input.todo-list {
+    width: 40%;
+    flex-wrap: nowrap;
+  }
+}
