@@ -130,6 +130,5 @@ li:hover .strikethrough::after {
   }
   input.todo-list {
     width: 40%;
-    flex-wrap: nowrap;
   }
 }
