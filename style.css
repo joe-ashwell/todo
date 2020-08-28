@@ -19,9 +19,9 @@ input {
 }
 
 h1 {
-  text-align: center;
-  margin: 5rem;
-  font-size: 4rem;
+  display: flex;
+  text-align: left;
+  font-size: 2rem;
   color: var(--myFontColour);
 }
 
@@ -33,13 +33,12 @@ h1 {
 
 div.listInput {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 div.listPad {
-  padding-top: 2rem;
-  width: 100%;
-  margin: auto;
+  padding-top: 1rem;
+  width: 70%;
 }
 
 input.todo-list {
@@ -50,7 +49,7 @@ input.todo-list {
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
   width: 60%;
-  margin: auto;
+  margin: 0;
 }
 
 ul {
@@ -77,10 +76,8 @@ li {
   margin-bottom: 0.3rem;
   margin-top: 0.3rem;
   cursor: pointer;
-  width: 70%;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
   padding: 1rem;
 }
 
@@ -124,9 +121,7 @@ li:hover .strikethrough::after {
 
 @media only screen and (max-width: 767px) {
   h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
   }
   input.todo-list {
     width: 50%;

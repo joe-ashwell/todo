@@ -3,6 +3,9 @@ const listInput = document.querySelector('input.todo-list');
 const button = document.querySelector('button.todo-list');
 const list = document.querySelector('ul.todo-list');
 const allListItems = document.querySelectorAll('li.todo-list');
+const listTitle = document.querySelector('h1.todo-list');
+// Array to store months of year
+const monthsOfYear = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 // Executing the list elements on click
 button.addEventListener('click', () => {
@@ -36,3 +39,23 @@ listInput.addEventListener("keyup", () => {
 
 });
 
+function setDate() {
+
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const day = now.getDay();
+
+  listTitle.innerHTML = 
+  `${day} ${monthsOfYear[month]} ${year}
+  <br>
+  Today's to do list:
+  `;
+
+}
+
+window.addEventListener('load', () => {
+
+  setDate();
+
+})
